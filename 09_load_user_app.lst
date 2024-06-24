@@ -1,0 +1,12 @@
+     1                                  
+     2                                  ;EQU:常量, 编译时会进行宏替换
+     3                                  USER_APP_START_SELECTOR EQU 100
+     4                                  
+     5                                  ; align=16          : 16 字节对齐
+     6                                  ; vstart=0x7c00     : 从0x7c00开始
+     7                                  SECTION loader align=16 vstart=0x7c00
+     8                                  
+     9                                  heihei:
+    10 00000000 01                           db 0x01
+    11                                  
+    12                                  ; mov ax, test
