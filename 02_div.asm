@@ -20,5 +20,5 @@ div8:
 div16:
     mov dx, 0x0010
     mov ax, 0x1000      ;   DX:AX = 0x00101000
-    mov bx, 0x0010      ;   BX    = 0x10
-    div bx              ;   AX    = 0x1010 (商)  DX = 0x0000 (余)
+    mov bx, 0x1000      ;   BX    = 0x1000
+    div bx              ;   AX    = 0x0101 (商)  DX = 0x0000 (余)
