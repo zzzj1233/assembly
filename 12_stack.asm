@@ -6,14 +6,16 @@
 
 ; 8086从栈高地址往低地址压栈
 
-; 压栈前 ss:sp : 0000:1000
+start:
 
-; push ax
+mov ax, 0x1000
+mov sp, ax
 
-; 压栈后 ss:sp : 0000:0ffe
+mov ax, 0x10 
+mov bx, 0x20
 
-; pop ax
+push ax ; sp = 0ffe
+push bx ; sp = 0ffc
 
-; 出栈后 ss:sp: 0000:1000
-
-
+pop ax  ; sp = 0ffe
+pop bx  ; sp = 0x1000
